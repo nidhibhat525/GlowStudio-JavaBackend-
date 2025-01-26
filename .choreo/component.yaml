@@ -1,7 +1,11 @@
-schemaVersion: 1.0 
- # Example endpoint configuration
+schemaVersion: "1.1"
 endpoints:
-- name: glow-studio
-  service:
-     port: 8080
-  type: REST
+    - name: glow-studio
+      displayName: glow-studio
+      service:
+        basePath: /
+        port: 8080
+      type: REST
+      networkVisibilities:
+        - Public
+      schemaFilePath: .
